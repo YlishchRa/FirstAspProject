@@ -1,0 +1,34 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Sing in to account";
+}
+
+<div><h1>WORK</h1></div>
+<div>
+    <div> Sing in </div>
+    <div>
+        <form asp-action="SingInAccount" method="post">
+           
+            <div>
+                <span asp-validation-for="Name"></span>
+                <label asp-for="Name">Name: </label>
+                <input asp-for="Name" />
+            </div>
+            <div>
+                <span asp-validation-for="Email"></span>
+                <label asp-for="Email">Email: </label>
+                <input asp-for="Email" />
+            </div>
+
+            <div>
+                <span asp-validation-for="Password"></span>
+                <label asp-for="Password">Password: </label>
+                <input asp-for="Password" />
+            </div>
+
+            <button type="submit">Sign in</button>
+        </form>
+    </div>
+</div>
+
+
